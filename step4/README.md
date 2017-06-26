@@ -78,7 +78,7 @@ Once you've made those changes, __save and flash your code__ (hit the lighting!)
 
 Then you'll need to open the Particle console at [http://console.particle.io](http://console.particle.io). If you log in with the information on the handout you'll be able to see all the events from devices (and it'll be up on screen too!) Once you're signed in, navigate to the events tab (left hand icon) 
 
-Then push the button!!!
+Then push the button!!! And you should see something like this!
 
 ![Events Console - has the button been pushed?](console.png)
 
