@@ -32,11 +32,18 @@ to make the LED brightness visible online too.
 
 Once you've made those changes,  __save and flash your code__ (hit the lighting!)
 
-To view these variables in real time, you can do that from Particle Dev. Choose the `Particle` Menu (top right) and then select `Show Cloud Variables`. A new panel will open and after a few moments you should see something like this:
+Then you'll need to open the Particle console at [http://console.particle.io](http://console.particle.io). 
+- If you log in with the information on the handout you'll be able to see all the variables from devices
+- On the left hand side click `My Devices`
+- Then click on the device that you want to see variables from
+- And press the `GET` button beside the variable.
+
+This will get live information from your device!
+
+Try changing your potentiometer readings and refreshing the values. 
 
 ![Cloud Variables](variables.png)
 
-Try changing your potentiometer readings and refreshing the values. 
 
 ### Making Announcements with `Particle.publish`
 
