@@ -30,7 +30,7 @@ By the end of this workshop you'll have built a simple ambient weather visualiza
 - Step 4: [Adding Internet - Seeing Values](/step4)
 - Step 5: [Controling Color](/step5)
 - Step 6: [Weather Data](/step6)
-- Step 7: [Presenting Temperature Ambiently](/step7)
+- Step 7: [Displaying Temperature](/step7)
 
 
 
