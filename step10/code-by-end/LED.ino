@@ -26,7 +26,7 @@ int cityIndex = 0;
 
 // Store if the LED display should 
 // be on or off
-bool ledState = false;
+bool ledState = true;
 
 void setup()
 {
