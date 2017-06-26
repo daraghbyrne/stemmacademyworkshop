@@ -88,6 +88,8 @@ For good measure add a short delay between looops
 
 Et voila! You should be able to control the brightness of your LED perfectly now. 
 
+The [completed code](code-by-end/LED.ino) is available in the folder above.
+
 ### Compiling and sending to the Particle device
 
 1. Make sure you save your sketch. 
