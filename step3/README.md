@@ -32,7 +32,61 @@ Make some changes to the circuit and add in the potentiometer:
 
 Use the LED code from Step 1 as a starting point for this sketch. The [completed code](code-by-end/LED.ino) is available in the folder above.
 
+We'll start by adding three variables to the top of our code
 
+1. The first will reference the pin that we're going to connect the potentiometer to `A0`
+2. The second will store a value that we read from the potentiometer
+3. The third will be a variable to store some info about the light levels (how much or how little have we faded it by)
+
+````
+// Define a pin that we'll place the pot on
+int potPin = A0;
+
+// Create a variable to hold the pot reading
+int potReading = 0;
+
+// Create a variable to store the LED brightness.
+int ledBrightness = 0;
+````
+
+In this example we don't need to make any changes to the `setup()` so we'll focus on the `loop()`
+
+First in our loop we'll read a value from `A0`. We'll use a function called analogRead to do this.
+
+```
+ // Use analogRead to read the potentiometer reading
+  // This gives us a value from 0 to 4095
+  potReading = analogRead(potPin);
+````
+
+Now we're going to want to be able to do more than just turn the power on or off (`HIGH` or `LOW`). THankfully there's a method that let's us do just that. It's `analogWrite`, unlike `digitalWrite` which turns the power just on or off to a pin `analogWrite` can (sort of) vary the power to a pin by using a trick called _pulse width modulation_. This essentially turns on and off the power to the pin really really fast (as much as several hundred times a second) and this simulates the conditions of lower power.Think about someone standing by a light switch and turning it on and off every second. Half the time its incredibly bright. Half the time its dark, but on average its sort of bright. This is essentially what pulse width modulation does. Anyway, that's more info than you need, but suffice to say it lets us 'fade down' an LED in 256 steps from 0 (off) to 127 (50%), to 255 (fully on). 
+
+Let's try it out...
+
+First we'll convert the potentiometer reading (between 0-4905) to the range of pwm control (0-255). 
+
+````
+  // Map this value into the PWM range (0-255)
+  // and store as the led brightness
+  ledBrightness = map(potReading, 0, 4095, 0, 255);
+````
+
+Then we'll control the output to the led like so
+
+````
+  // fade the LED to the desired brightness
+  analogWrite(ledPin, ledBrightness);
+````
+
+For good measure add a short delay between looops
+
+```
+  // wait 1/10th of a second and then loop
+  delay(100);
+  
+```
+
+Et voila! You should be able to control the brightness of your LED perfectly now. 
 
 ### Compiling and sending to the Particle device
 
