@@ -15,6 +15,9 @@ double temperature = 0;
 double precipProbability = 0;
 double precipIntensity = 0;
 
+// Store the last time 
+// the webhook was called 
+long lastData = 0;
 
 
 void setup()
@@ -34,12 +37,10 @@ void setup()
 
   Particle.variable("dial", &potReading, INT);
 
-	// subscribe to the response from the webhook
   Particle.subscribe("hook-response/forecast", handleForecastReceived, MY_DEVICES);
 	
 	// make the temperature values visible online
   Particle.variable("temp", &temperature, DOUBLE );
-	
 	
 	getData();
 	
@@ -47,13 +48,23 @@ void setup()
 
 void loop()
 {
+	checkForRefresh();
 
-		
-		displayTemperature();
-
+	displayTemperature();
 
 }
 
+void checkForRefresh(){
+
+  // has it been 10 minutes since we last updated
+  if( lastData == 0 or lastData + 600000 < millis() )
+  {
+		// get data from the webhook
+    getData();
+		// if we're refreshing, set the time we last called the webhook to now
+    lastData = millis();
+  }
+}
 
 
 void getData()
@@ -61,6 +72,7 @@ void getData()
 	// Publish an event to trigger the webhook
 	  Particle.publish("forecast", "40.4406,-79.9959", PRIVATE);
 }
+
 
 
 void displayTemperature()

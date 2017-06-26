@@ -15,6 +15,11 @@ double temperature = 0;
 double precipProbability = 0;
 double precipIntensity = 0;
 
+// Store the last time 
+// the webhook was called 
+long lastData = 0;
+
+bool isLoading = false;
 
 
 void setup()
@@ -36,14 +41,37 @@ void setup()
 
   Particle.subscribe("hook-response/forecast", handleForecastReceived, MY_DEVICES);
 	
+	// make the temperature values visible online
+  Particle.variable("temp", &temperature, DOUBLE );
+	
 	getData();
 	
 }
 
 void loop()
 {
+	checkForRefresh();
 
+  if( isLoading ) {
+    digitalWrite( ledPin, HIGH );
+    delay( 100 );
+    digitalWrite( ledPin, LOW );
+  }
 
+	displayTemperature();
+
+}
+
+void checkForRefresh(){
+
+  // has it been 10 minutes since we last updated
+  if( lastData == 0 or lastData + 600000 < millis() )
+  {
+		// get data from the webhook
+    getData();
+		// if we're refreshing, set the time we last called the webhook to now
+    lastData = millis();
+  }
 }
 
 
@@ -51,10 +79,37 @@ void getData()
 {
 	// Publish an event to trigger the webhook
 	  Particle.publish("forecast", "40.4406,-79.9959", PRIVATE);
+		
+	  isLoading = true;
+		
 }
+
+
+
+void displayTemperature()
+{
+		// the temperature from 50-100F into the color range of 0-255
+    int tCol = map( (int)(temperature), 50, 100 , 0 , 255 );
+		// make sure its in that range 
+		// not bigger or smaller!
+    tCol = constrain( tCol, 0, 255 );
+		
+		// tell the photon we want to control
+		// the RGB color
+    RGB.control( true );
+
+		// map the color in.
+		// if t is high so is Red
+		// if t is low, blue is high
+    RGB.color( tCol , 0, 255 - tCol );
+}
+
 
 void handleForecastReceived(const char *event, const char *data) {
   // Handle the integration response
+
+  isLoading = false; 
+
 
   String receivedStr =  String( data );
   int loc1 = 0;
