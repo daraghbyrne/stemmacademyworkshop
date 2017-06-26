@@ -5,7 +5,7 @@
 
 First things first, we'll make the circuit that our Photon will control!
 
-![Basic LED circuit][BasicLed_bb.jpg]
+![Basic LED circuit](BasicLed_bb.jpg)
 
 To make this circuit you need a Particle microcontroller, an LED, a 1KΩ resistor (brown, black, red)
 
