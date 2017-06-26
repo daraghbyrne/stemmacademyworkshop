@@ -31,8 +31,6 @@ By the end of this workshop you'll have built a simple ambient weather visualiza
 - Step 5: [Controling Color](/step5)
 - Step 6: [Weather Data](/step6)
 - Step 7: [Displaying Temperature](/step7)
-
-
-
-- Step 7: [Adding Multiple Cities](/step7)
-- Step 8: [Fine Tuning](/step8)
+- Step 8: [Better Loading](/step8)
+- Step 9: [Adding Multiple Cities](/step9)
+- Step 10: [Fine Tuning](/step10)
