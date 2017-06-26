@@ -38,3 +38,44 @@ To view these variables in real time, you can do that from Particle Dev. Choose 
 
 Try changing your potentiometer readings and refreshing the values. 
 
+### Making Announcements with `Particle.publish`
+
+The Particle Cloud let’s us do lots of awesome things like put variables from our microcontroller online quickly. It also let’s us pass useful messages to devices that are interested in hearing what our microcontroller’s got to say. It does this through it’s events. Events are mini messages that other devices can listen out for. As you share (or publish an event), those devices that are listening are notified and can do stuff with the information. Think of them as a Twitter for devices
+
+Again it only takes one line of code to publish an event
+
+````Particle.publish( eventName, data ); ````
+
+This line is like my device saying: __‘Pst, I’ve got something you might want to know’__
+
+Let's add in an event to our code.... 
+
+Copy and paste the push button code from Stage 2 into our loop and let's make one quick change
+
+````    int buttonState = digitalRead( buttonPin );
+
+    if( buttonState == LOW )
+    {
+     // turn the LED On
+     digitalWrite( ledPin, HIGH);
+    }
+
+````
+
+Let's change the digitalWrite to a publish and have our device announce when the button is pushed.
+
+````    int buttonState = digitalRead( buttonPin );
+
+    if( buttonState == LOW )
+    {
+     // turn the LED On
+     Particle.publish( "iveBeenPushed" );
+    }
+
+````
+
+
+
+
+
+
