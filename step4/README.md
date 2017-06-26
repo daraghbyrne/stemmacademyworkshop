@@ -30,7 +30,7 @@ to make the potentiometer reading visible online... and
 
 to make the LED brightness visible online too. 
 
-Once you've made those changes, save and flash your code (hit the lighting!)
+Once you've made those changes,  __save and flash your code__ (hit the lighting!)
 
 To view these variables in real time, you can do that from Particle Dev. Choose the `Particle` Menu (top right) and then select `Show Cloud Variables`. A new panel will open and after a few moments you should see something like this:
 
@@ -73,6 +73,12 @@ Let's change the digitalWrite to a publish and have our device announce when the
     }
 
 ````
+
+Once you've made those changes, __save and flash your code__ (hit the lighting!)
+
+Then you'll need to open the Particle console at [http://console.particle.io](http://console.particle.io). If you log in with the information on the handout you'll be able to see all the events from devices (and it'll be up on screen too!) Once you're signed in, navigate to the events tab (left hand icon) 
+
+Then push the button!!!
 
 
 
