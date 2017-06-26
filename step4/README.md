@@ -34,7 +34,7 @@ Once you've made those changes, save and flash your code (hit the lighting!)
 
 To view these variables in real time, you can do that from Particle Dev. Choose the `Particle` Menu (top right) and then select `Show Cloud Variables`. A new panel will open and after a few moments you should see something like this:
 
-![Cloud Variables](variables-panel.jpg)
+![Cloud Variables](variables.png)
 
 Try changing your potentiometer readings and refreshing the values. 
 
