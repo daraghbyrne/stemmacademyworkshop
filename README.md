@@ -29,6 +29,10 @@ By the end of this workshop you'll have built a simple ambient weather visualiza
 - Step 3: [Adding a Potentiometer and Fading the LED](/step3)
 - Step 4: [Adding Internet - Seeing Values](/step4)
 - Step 5: [Controling Color](/step5)
-- Step 6: [Ambient Weather](/step6)
+- Step 6: [Weather Data](/step6)
+- Step 7: [Presenting Temperature Ambiently](/step7)
+
+
+
 - Step 7: [Adding Multiple Cities](/step7)
 - Step 8: [Fine Tuning](/step8)
