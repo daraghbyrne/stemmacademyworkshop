@@ -3,7 +3,15 @@
 
 I'm sure we won't always want our weather viz on! Let's use the push button to turn off the visualization for a bit.
 
-Let's make a quick change to toggle on and off the visualisation.  All of these changes will go into our `loop()`
+Let's make a quick change to toggle on and off the visualisation.  
+
+We'll need a variable to store if the visualization is turned on or off by the push button. At the top of your code add the following line
+
+````
+bool ledState = true;
+````
+
+All of these changes will go into our `loop()`
 
 First we'll need to read in our button. Add this line to the top of the loop. It'll see if the button is pushed by checking for power on the button pin
 
