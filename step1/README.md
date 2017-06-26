@@ -59,4 +59,5 @@ void loop()
 
 ````
 
+Copy and paste this code into Particle Dev and we'll start to add some basic stuff to make interactive!
 
