@@ -45,7 +45,7 @@ void setup()
    // add this line... 
   pinMode( buttonPin , INPUT_PULLUP); // sets pin as input
 }
-```
+````
 
 And then we're going to change our loop to look like this:
 
@@ -84,11 +84,11 @@ Let's break this down:
 
 This reads the current state from the terminal. If the button is pushed, the value will change. Remember digitalRead gives us a `HIGH` or a `LOW` value.  If it's pushed, we'll get a `LOW` because it's connected to ground.
 
-```    if( buttonState == LOW )````
+```    if( buttonState == LOW )```
 
 An `if statement` allows us to test to see if a condition is true. In this case is the button pushed. If it is then everything inside the next set of curly braces `{` and `}` is performed. 
 
-```     digitalWrite( ledPin, HIGH);````
+```     digitalWrite( ledPin, HIGH);```
 
 Which is to turn the LED on
 
