@@ -12,6 +12,15 @@ As part of this workshop you'll have a kit with
 - LEDs (components that make light)
 - A momemntary push button
 
+By the end of this workshop you'll have built a simple ambient weather visualization using this components. It'll work like this:
+- the pushbutton will let you turn the visualization on (displaying) and off (no lights).
+- the potentiometer will work like a dial allowing you to select multiple cities 
+- in the background, the microcontroller will look up weather data online 
+- while it's retrieving data, the LED will blink to let you know
+- it'll display temperature information on the device using the inbuilt RGB (full color) LED.
+- hot places will be displayed with with a red color (>95F or more) and cool blue will indicate temperatures of 50F or less.
+- it'll automatically update every 10 minutes. 
+
 
 ### Step by Step
 
