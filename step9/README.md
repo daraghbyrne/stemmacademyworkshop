@@ -84,3 +84,7 @@ void getData()
 ````
 
 Add it to your code, save and compile!
+
+## Give it a whirl
+
+Once the code has flashed, dial the knob and see it cycle through cities! 
