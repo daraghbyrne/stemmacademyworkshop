@@ -33,7 +33,17 @@ Let's start fresh after all those experiments. You might want to [copy and paste
 
 We're going to add two pieces of code to help get data on the weather in Pittsburgh
 
-Copy and paste the following into the end of your code file
+We're going to store some information in variables about the weather. To do this add the following variables to the top of your code
+
+````
+String weatherIcon = "";
+double temperature = 0;
+double precipProbability = 0;
+double precipIntensity = 0;
+````
+
+THen copy and paste the following into the end of your code file
+
 
 `````
 
