@@ -74,6 +74,7 @@ Then if it's loading we'll want to blink the LED. This means we'll use a conditi
 Then finally in the `getData()` method, we need to set the isLoading variable to true to indicate it is loading data 
 
 Update this method to add this at the end
+
 ````
 void getData()
 {
@@ -81,6 +82,7 @@ void getData()
 	
   isLoading = true;
 }
+````
 
 
 And in the handler for webhook responses i.e. when we've got the information back we'll want to set the variable to not-loading or false> Like so:
