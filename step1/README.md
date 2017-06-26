@@ -163,14 +163,14 @@ Looks like we’re ready to put this program on your microcontroller.
 
 4. Wait a few moments, it should return to breathing blue, and the LED should begin to flash!
 
-### Congrats! 
+## Congrats! 
 
 You’ve just build your first circuit and written your first program to make it interactive. Below are some ways you can take it further.
 
 You can take a look at the [completed code](code-by-end/BasicLED.ino) too.
 
 
-### Things to Try 
+## Things to Try 
 
 __Exercise 1__
 Modify the program to Blink on and off every 3 seconds.
