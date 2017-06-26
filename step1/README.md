@@ -78,7 +78,7 @@ This is the program that you'll create. You’ll find the code for this example 
 
 Before we do that, let’s explore what’s happening here line by line.
 
-#### Defining Variables
+### Defining Variables
 
 The first line of our program is the following.
 
@@ -87,7 +87,7 @@ We have declared a variable of type `integer` and called it `ledPin`; that means
 
 We’ve also assigned this variable a reference to pin `D0`. Basically, we’ve created a variable we can use to tell other stuff in the program that we want to do things with Digital Pin Zero.
 
-#### Setup `setup()`
+### Setup `setup()`
 
 Within the setup function, the microcontroller expects us to tell us how we want to use it. One of the most common things to do, is declare how the pins will be used. Digital Pins (and some other pins) can be used for input and output. So when we want to use a PIN we first need to say which of the two it will be used for.
 
@@ -102,7 +102,7 @@ void setup() {
 ````
 Remember that `ledPin` is a variable that maps to the digital pin zero (`D0`).
 
-#### Digital Write
+### Digital Write
 
 We’re going to use a command called `digitalWrite` to control the pin at `D0`. It’s called a digital pin because its basically like binary, its either a 0 or a 1, on or off or in microcontroller speak `HIGH` or `LOW`.
 
@@ -110,7 +110,7 @@ A pin is basically like a faucet. Its connected to power from the USB that we pl
 
 `digitalWrite` takes two parameters or passed variables which tell it the pin we want to control and what the power should be set to (`HIGH` or `LOW`).
 
-##### Making it blink
+### Making it blink
 
 This is where the good stuff happens.
 
@@ -149,7 +149,7 @@ Let’s break this down:
 
 Looks like we’re ready to put this program on your microcontroller.
 
-##### Compiling and sending to the Particle device
+### Compiling and sending to the Particle device
 
 1. Make sure the Status Bar (bottom of Particle Dev) has a device connected and the photon’s indicator is breathing blue. If not make sure your Photon is connected by USB and is getting a WiFi signal.
 
@@ -163,14 +163,14 @@ Looks like we’re ready to put this program on your microcontroller.
 
 4. Wait a few moments, it should return to breathing blue, and the LED should begin to flash!
 
-#### Congrats! 
+### Congrats! 
 
 You’ve just build your first circuit and written your first program to make it interactive. Below are some ways you can take it further.
 
 You can take a look at the [completed code](code-by-end/BasicLED.ino) too.
 
 
-#### Things to Try 
+### Things to Try 
 
 __Exercise 1__
 Modify the program to Blink on and off every 3 seconds.
