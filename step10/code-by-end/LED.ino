@@ -24,6 +24,10 @@ bool isLoading = false;
 String currentCity = "none";
 int cityIndex = 0;
 
+// Store if the LED display should 
+// be on or off
+bool ledState = false;
+
 void setup()
 {
   // Set up the LED for output
