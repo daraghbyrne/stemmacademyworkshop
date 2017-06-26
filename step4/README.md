@@ -80,7 +80,7 @@ Then you'll need to open the Particle console at [http://console.particle.io](ht
 
 Then push the button!!!
 
-
+![Events Console - has the button been pushed?](console.png)
 
 
 
