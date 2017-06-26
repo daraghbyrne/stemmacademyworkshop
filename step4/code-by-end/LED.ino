@@ -48,7 +48,15 @@ void loop()
   // fade the LED to the desired brightness
   analogWrite(ledPin, ledBrightness);
 
+  int buttonState = digitalRead( buttonPin );
+
+	 if( buttonState == LOW )
+	 {
+	  // turn the LED On
+	  Particle.publish( "iveBeenPushed" );
+	 }
+
   // wait 1/10th of a second and then loop
-  delay(100);
+  delay(1000);
 
 }
