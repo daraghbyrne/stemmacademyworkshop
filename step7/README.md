@@ -42,3 +42,19 @@ Add this one line:
 ````
 
 Save your code. Flash your code and you should see the color change. 
+
+
+### Seeing it online too
+
+While we're at it, it's really easy to add a `Particle.variable` to see the actual value of the temperature quickly from the console. 
+
+In setup() add the following to make the temperature value visible online. 
+
+````
+  Particle.variable("temp", &temperature, DOUBLE );
+````
+
+Save your code. Flash your code and you should see the color change. To view these variables in real time, you can do that from Particle Dev. Choose the `Particle` Menu (top right) and then select `Show Cloud Variables`. A new panel will open and after a few moments you should see something like this:
+
+![Cloud Variables](temp.png)
+

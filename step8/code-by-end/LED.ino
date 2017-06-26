@@ -34,12 +34,7 @@ void setup()
 
   Particle.variable("dial", &potReading, INT);
 
-	// subscribe to the response from the webhook
   Particle.subscribe("hook-response/forecast", handleForecastReceived, MY_DEVICES);
-	
-	// make the temperature values visible online
-  Particle.variable("temp", &temperature, DOUBLE );
-	
 	
 	getData();
 	
