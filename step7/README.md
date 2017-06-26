@@ -1,4 +1,4 @@
-# Step 7: Color Change
+# Step 7: Displaying Temperature
 
 We're going to visualize the weather from blue to red (cold to hot). To do this we're going to take the temperature value we receive from the webhook and map it into the RGB LED of the Photon.
 
